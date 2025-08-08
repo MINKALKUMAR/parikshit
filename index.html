@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentMyProperty - Find Your Perfect Property</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css"> 
+    <!-- title icon  -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/minkal/logo/web-logo.png?updatedAt=1754687583362" />
+    <!-- <link rel="icon" type="image/png" href="logo/web-logo.png" /> -->
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/minkal/logo/web-logo.png?updatedAt=1754687583362">
+    <meta name="theme-color" content="#ffffff">
+     <!-- Add to homescreen -->
+     <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+  <div class="top-social-strip">
+      <div class="top-social-links">
+          <a href="https://www.facebook.com/share/1GNTLxixe4/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        
+          <a href="https://www.instagram.com/rentmyproperty.com_india" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+  </div>
+  <div class="container">
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+          <div class="nav-content">
+              <a href="#home" class="nav-logo">
+                  <img src="https://ik.imagekit.io/minkal/logo/web-logo.png?updatedAt=1754687583362" alt="RentMyProperty Logo">
+                  <!-- <img src="logo/web-logo.png" alt="RentMyProperty Logo"> -->
+                  RentMyProperty
+              </a>
+              <ul class="nav-links" id="navLinks">
+                  <!-- <li><a href="#home">Home</a></li>
+                  <li><a href="#rooms">Property</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li> -->
+                  <li><a href="registration.html" class="property-registration-btn">
+                      <i class="fas fa-plus-circle"></i> Property Owner Registration
+                  </a></li>
+                  <li><a href="tenant.html" class="tenant-info-btn">
+                      <i class="fas fa-user-plus"></i> Tenant Information Form
+                  </a></li>
+                  <li><a href="#" onclick="openWhatsApp()" class="nav-contact" target="_blank">
+                      <i class="fab fa-whatsapp"></i> Contact Us
+                  </a></li>
+              </ul>
+              <button class="mobile-menu-btn" id="mobileMenuBtn">
+                  <i class="fas fa-bars"></i>
+              </button>
+          </div>
+      </nav>
+
+      <header id="home">
+          <div class="logo">
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/web-logo-D6UaA1yyxTPyNn8nzvgVDBcfGz4P1U.png" alt="RentMyProperty Logo">
+              RentMyProperty
+          </div>
+          <p class="tagline">Find your Rentals Properties in the best locations. Filter by preferences to find exactly what you need.</p>
+          <!-- Property Owner Registration Button -->
+          <div class="header-cta">
+              <a href="registration.html" class="property-owner-cta">
+                  <i class="fas fa-building"></i> List Your Property - Get Tenants Fast!
+              </a>
+              <a href="tenant.html" class="tenant-info-cta">
+                  <i class="fas fa-user-plus"></i> Looking for Property? Fill Tenant Form
+              </a>
+          </div>
+      </header>
+      
+      <section class="filters-section" id="rooms">
+          <h2 style="text-align: center; margin-bottom: 25px; color: #2c3e50;">
+              <i class="fas fa-filter"></i> Find your Perfect Rentals Properties
+          </h2>
+          
+          <div class="filters-grid">
+              <div class="filter-group">
+                  <label for="location"><i class="fas fa-map-marker-alt"></i> Select Location</label>
+                  <select id="location" class="filter-select">
+                      <option value="all">All Locations</option>
+                      <option value="sector-19,chandigarh">Sector 19,Chandigarh</option>
+                      <option value="sector-20a,chandigarh">Sector 20A,Chandigarh</option>
+                      <option value="sector-23d,chandigarh">Sector 23D,Chandigarh</option>
+                      <option value="sector-23">Sector 23</option>
+                      <option value="sector-45">Sector 45</option>
+                      <option value="sector-56">Sector 56</option>
+                      <option value="sector-114,mohali">Sector 114,Mohali</option>
+                      <option value="sector-126,mohali">Sector 126,Mohali</option>
+                      <option value="sector-127,mohali">Sector 127,Mohali</option>
+                      <option value="sector-8">Sector 8</option>
+                  </select>
+              </div>
+              
+              <div class="filter-group">
+                  <label for="bhk"><i class="fas fa-home"></i>Types of Property</label>
+                  <select id="bhk" class="filter-select">
+                      <option value="all">All Types</option>
+                      <option value="Room with Kitchen">Room with Kitchen</option>
+                      <option value="Room with Washroom">Room with Washroom</option>
+                      <option value="1 BHK">1 BHK</option>
+                      <option value="2 BHK">2 BHK</option>
+                      <option value="3 BHK">3 BHK</option>
+                      <option value="PG">PG</option>
+                  </select>
+              </div>
+              
+              <div class="filter-group">
+                  <label for="gender"><i class="fas fa-users"></i> Types of Occupancy</label>
+                  <select id="gender" class="filter-select">
+                      <option value="all">All</option>
+                      <option value="girls">For Girls</option>
+                      <option value="boys">For Boys</option>
+                      <option value="family">For Family</option>
+                      <option value="for-all">For All (Girls/Boys/Family)</option>
+                  </select>
+              </div>
+              
+              <div class="filter-group">
+                  <label for="price"><i class="fas fa-rupee-sign"></i> Rent per month</label>
+                  <select id="price" class="filter-select">
+                      <option value="all"> Any </option>
+                      <option value="<=10000">≤ ₹10,000</option>
+                      <option value="<=20000">≤ ₹20,000</option>
+                      <option value="<=30000">≤ ₹30,000</option>
+                      <option value=">=30000">≥ ₹30,000</option>
+                  </select>
+              </div>
+          </div>
+          
+          <div class="filter-actions">
+              <button class="filter-btn" id="applyFilters">
+                  <i class="fas fa-search"></i> Search Property
+              </button>
+              <button class="filter-btn reset" id="resetFilters">
+                  <i class="fas fa-sync-alt"></i> Reset Filters
+              </button>
+          </div>
+      </section>
+      
+      <div class="cards-container" id="cardsContainer">
+          <!-- Cards will be generated by JavaScript -->
+      </div>
+
+      <!-- Pagination Section -->
+      <div class="pagination-section">
+          <button class="more-rooms-btn" id="moreRoomsBtn">
+              <i class="fas fa-plus-circle"></i> More Property
+          </button>
+          <div class="rooms-count" id="roomsCount">
+              Showing <span id="currentCount">0</span> of <span id="totalCount">0</span> Property
+          </div>
+      </div>
+      
+  </div>
+<!-- Replace your existing footer with this -->
+<footer>
+  <div class="footer-content">
+      <div class="footer-section">
+          <h3>RentMyProperty</h3>
+          <p>Find your perfect property in the best locations. We connect tenants with property owners for a seamless renting experience.</p>
+          <div class="social-links">
+              <a href="https://www.facebook.com/share/1GNTLxixe4/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/rentmyproperty.com_india?igsh=emxmMGpjeGxlcGFm" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/+917830063882" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+      
+      <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="#rooms"><i class="fas fa-chevron-right"></i> Find Property</a></li>
+              <li><a href="registration.html"><i class="fas fa-chevron-right"></i> List Your Property</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right"></i> How It Works</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+          </ul>
+      </div>
+      
+      <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+              <li><i class="fas fa-map-marker-alt"></i>Sector 66, Mohali</li>
+              <li><i class="fas fa-phone"></i> +91 7830063882</li>
+              <li><i class="fas fa-envelope"></i> rentmyproperty.org.in@gmail.com</li>
+              <li><i class="fas fa-clock"></i> Monday-Sunday: 9AM - 7PM</li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="footer-bottom">
+      <p>&copy; 2023 RentMyProperty. All Rights Reserved | Designed with <i class="fas fa-heart"></i> for renters</p>
+  </div>
+</footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

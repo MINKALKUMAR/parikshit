@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Owner Registration - RentMyProperty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- <link rel="icon" type="image/png" href="logo/web-logo.png" /> -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/minkal/logo/web-logo.png?updatedAt=1754687583362" />
+</head>
+<body>
+    <div class="top-social-strip">
+        <div class="top-social-links">
+            <a href="https://www.facebook.com/share/1GNTLxixe4/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/rentmyproperty.com_india" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <!-- <img src="logo/web-logo.png" alt="RentMyProperty Logo"> -->
+                    <img src="https://ik.imagekit.io/minkal/logo/web-logo.png?updatedAt=1754687583362" alt="RentMyProperty Logo">
+                    RentMyProperty
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#rooms">Property</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#" onclick="openWhatsApp()" class="nav-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contact Us
+                    </a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Registration Form Section -->
+        <section class="registration-section">
+            <div class="registration-container">
+                <div class="registration-header">
+                    <div class="logo">
+                        <img src="https://ik.imagekit.io/minkal/logo/web-logo.png?updatedAt=1754687583362" alt="RentMyProperty Logo">
+                        <h1>Property Owner Registration</h1>
+                    </div>
+                    <p class="registration-tagline">List your property with us and find tenants quickly!</p>
+                </div>
+
+                <form id="propertyRegistrationForm" class="registration-form">
+                    <!-- Owner Details -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Owner Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ownerName">Owner's Full Name: <span class="required">*</span></label>
+                                <input type="text" id="ownerName" name="ownerName" required 
+                                       placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Owner's Phone Number: <span class="required">*</span></label>
+                                <input type="phone" id="phoneNumber" name="phoneNumber" required 
+                                       placeholder="Enter your phone number" pattern="[0-9]{10}">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address (optional):</label>
+                                <input type="email" id="email" name="email" 
+                                       placeholder="Enter your email address">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Details -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-home"></i> Property Details</h3>
+                        
+                        <!-- Property Type -->
+                        <div class="form-group">
+                            <label>Types of property: <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="propertyType" value="Room with Kitchen" required>
+                                    <span class="radio-custom"></span>
+                                    Room with Kitchen
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="propertyType" value="Room with Washroom" required>
+                                    <span class="radio-custom"></span>
+                                    Room with Washroom
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="propertyType" value="1BHK" required>
+                                    <span class="radio-custom"></span>
+                                    1BHK
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="propertyType" value="2BHK" required>
+                                    <span class="radio-custom"></span>
+                                    2BHK
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="propertyType" value="3BHK" required>
+                                    <span class="radio-custom"></span>
+                                    3BHK
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="propertyType" value="PG" required>
+                                    <span class="radio-custom"></span>
+                                    PG
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="form-group">
+                            <label>Location: <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="location" value="Chandigarh" required>
+                                    <span class="radio-custom"></span>
+                                    Chandigarh
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="location" value="Mohali" required>
+                                    <span class="radio-custom"></span>
+                                    Mohali
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Location -->
+                        <div class="form-group">
+                            <label for="detailedLocation">Detailed location: <span class="required">*</span></label>
+                            <input type="text" id="detailedLocation" name="detailedLocation" required 
+                                   placeholder="e.g., Sector 23, Near Metro Station">
+                        </div>
+
+                        <!-- Monthly Rent -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="monthlyRent">Monthly Rent ₹: <span class="required">*</span></label>
+                                <input type="number" id="monthlyRent" name="monthlyRent" required 
+                                       placeholder="Enter rent amount" min="1000">
+                            </div>
+                            <div class="form-group">
+                                <label>Negotiable? <span class="required">*</span></label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="negotiable" value="Yes" required>
+                                        <span class="radio-custom"></span>
+                                        Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="negotiable" value="No" required>
+                                        <span class="radio-custom"></span>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Allowed For -->
+                        <div class="form-group">
+                            <label>Allowed for: <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="allowedFor" value="For boys" required>
+                                    <span class="radio-custom"></span>
+                                    For boys
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="allowedFor" value="For girls" required>
+                                    <span class="radio-custom"></span>
+                                    For girls
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="allowedFor" value="For family" required>
+                                    <span class="radio-custom"></span>
+                                    For family
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="allowedFor" value="For All" required>
+                                    <span class="radio-custom"></span>
+                                    For All
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Room Details -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-bed"></i> Room Details</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="Fully Furnished">
+                                <span class="checkbox-custom"></span>
+                                Fully Furnished
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="Semi Furnished">
+                                <span class="checkbox-custom"></span>
+                                Semi Furnished
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="Unfurnished">
+                                <span class="checkbox-custom"></span>
+                                Unfurnished
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="Independent">
+                                <span class="checkbox-custom"></span>
+                                Independent
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="AC">
+                                <span class="checkbox-custom"></span>
+                                AC
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="Cooler">
+                                <span class="checkbox-custom"></span>
+                                Cooler
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="Fan">
+                                <span class="checkbox-custom"></span>
+                                Fan
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="roomDetails" value="RO">
+                                <span class="checkbox-custom"></span>
+                                RO
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Amenities -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-star"></i> Amenities</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Wi-Fi">
+                                <span class="checkbox-custom"></span>
+                                 Wi-Fi
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Power Backup">
+                                <span class="checkbox-custom"></span>
+                                 Power Backup
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Parking (2-Wheeler)">
+                                <span class="checkbox-custom"></span>
+                                 Parking (2-Wheeler)
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Parking (4-Wheeler)">
+                                <span class="checkbox-custom"></span>
+                                 Parking (4-Wheeler)
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Water Supply (24x7)">
+                                <span class="checkbox-custom"></span>
+                                 Water Supply (24x7)
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Lift">
+                                <span class="checkbox-custom"></span>
+                                 Lift
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Security / CCTV">
+                                <span class="checkbox-custom"></span>
+                                 Security / CCTV
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Geyser">
+                                <span class="checkbox-custom"></span>
+                                 Geyser
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="amenities" value="Washing Machine">
+                                <span class="checkbox-custom"></span>
+                                 Washing Machine
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-info-circle"></i> Additional Information</h3>
+                        <div class="form-group">
+                            <label for="additionalInfo">Any other details you'd like to share:</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4" 
+                                      placeholder="Type here.."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fab fa-whatsapp"></i> Submit & Send via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RentMyProperty</h3>
+                <p>Find your perfect property in the best locations. We connect tenants with property owners for a seamless renting experience.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1GNTLxixe4/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/rentmyproperty.com_india?igsh=emxmMGpjeGxlcGFm" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/+917830063882" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="index.html#rooms"><i class="fas fa-chevron-right"></i> Find Property</a></li>
+                    <li><a href="registration.html"><i class="fas fa-chevron-right"></i> List Your Property</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> How It Works</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i>Sector 66, Mohali</li>
+                    <li><i class="fas fa-phone"></i> +91 7830063882</li>
+                    <li><i class="fas fa-envelope"></i> rentmyproperty.org.in@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Monday-Sunday: 9AM - 7PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 RentMyProperty. All Rights Reserved | Designed with <i class="fas fa-heart"></i> for renters</p>
+        </div>
+    </footer>
+
+    <script src="/js/registration.js"></script>
+</body>
+</html>
