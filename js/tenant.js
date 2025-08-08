@@ -32,7 +32,7 @@ document.getElementById('tenantInformationForm').addEventListener('submit', func
     const budget = formData.get('budget');
     const moveInTime = formData.get('moveInTime');
     
-    if (!fullName || !age || !phoneNumber || !email || !occupation || !nativePlace || 
+    if (!fullName || !age || !phoneNumber || !occupation || !nativePlace || 
         !occupancyType || !propertyType || !budget || !moveInTime) {
         alert('Please fill all required fields marked with *');
         return;
@@ -50,11 +50,13 @@ document.getElementById('tenantInformationForm').addEventListener('submit', func
         return;
     }
     
-    // Validate email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
+    // Validate email (only if provided)
+    if (email && email.trim() !== '') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address or leave the field empty');
+            return;
+        }
     }
     
     // Check if at least one preferred location is selected
@@ -154,23 +156,7 @@ document.getElementById('tenantInformationForm').addEventListener('submit', func
             }
         }
     }
-    
-    // Employment Information
-    const companyName = formData.get('companyName');
-    const monthlyIncome = formData.get('monthlyIncome');
-    const employmentType = formData.get('employmentType');
-    if (companyName || monthlyIncome || employmentType) {
-        message += `\n💼 *EMPLOYMENT INFO:*\n`;
-        if (companyName && companyName.trim()) {
-            message += `Company: ${companyName.trim()}\n`;
-        }
-        if (monthlyIncome) {
-            message += `Monthly Income: ₹${monthlyIncome}\n`;
-        }
-        if (employmentType) {
-            message += `Employment Type: ${employmentType}\n`;
-        }
-    }
+
     
     // Additional Information
     const specialRequirements = formData.get('specialRequirements');
