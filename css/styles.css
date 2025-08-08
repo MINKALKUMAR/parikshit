@@ -300,7 +300,7 @@ body {
   }
 
   .navbar {
-      position: fixed;
+      position: absolute;
       top: 30px;
   }
 }
