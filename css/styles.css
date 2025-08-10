@@ -854,10 +854,9 @@ header::before {
 /* Cards Container */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 10px;
 }
 
 .card {
@@ -868,8 +867,7 @@ header::before {
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow: hidden;
+  min-height: 500px;
 }
 
 .card:hover {
@@ -976,10 +974,11 @@ header::before {
 
 /* Card Content */
 .card-content {
-  padding: 15px;
-  flex: 1;
+  padding: 20px;
+  height: 30%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-header {
@@ -1074,98 +1073,45 @@ header::before {
 
 .room-header {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  width: 100%;
 }
 
 .room-id {
-  font-size: 0.8rem;
-  color: #666;
-  background: #f5f5f5;
-  padding: 2px 8px;
-  border-radius: 10px;
-  white-space: nowrap;
-}
-
-.location,
-.room-type {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.location i,
-.room-type i {
-  color: #1a2a6c;
-}
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0;
-}
-
-.feature {
-  background: #f0f4f8;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.feature i {
-  color: #1a2a6c;
-  font-size: 0.9em;
-}
-
-.gender-tag {
-  background: #e8f0fe;
-  color: #1a2a6c;
+  background: #4b6cb7;
+  color: white;
   padding: 4px 10px;
   border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  align-self: flex-start;
-  margin-top: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.price {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1a2a6c;
-  margin-top: auto;
-}
-
-.price span {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #666;
+.room-id:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .contact-btn {
-  background: linear-gradient(135deg, #1a2a6c, #3f51b5);
+  background: linear-gradient(to right, #4b6cb7, #182848);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 8px 20px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
   transition: all 0.3s ease;
-  width: 100%;
-  margin-top: 15px;
 }
 
 .contact-btn:hover {
+  opacity: 0.9;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Pagination Styles */
@@ -1380,79 +1326,20 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 20px;
-  }
-  
-  .cards-container {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
-}
-
-@media (max-width: 992px) {
-  .filters-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .filter-actions {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-  }
-}
-
 @media (max-width: 768px) {
-  .header-cta {
-    flex-direction: column;
-    gap: 10px;
+  .footer-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
   }
   
-  .property-owner-cta,
-  .tenant-info-cta {
-    width: 100%;
-    text-align: center;
+  .footer-section {
+      margin-bottom: 0;
   }
-  
-  .filters-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  
-  .cards-container {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 10px;
-  }
-  
-  .card {
-    max-width: 100%;
-  }
-  
-  .room-header h2 {
-    font-size: 1rem;
-  }
-  
-  .location,
-  .room-type {
-    font-size: 0.85rem;
-  }
-  
-  .feature {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-  }
-  
-  .price {
-    font-size: 1.1rem;
-  }
-  
+
   .registration-section {
-    padding: 20px;
-    margin: 10px auto 20px;
+      padding: 20px;
+      margin: 10px auto 20px;
   }
-}
 
   .registration-form {
       padding: 20px;
@@ -1497,7 +1384,7 @@ footer {
       padding: 10px 20px;
       font-size: 0.95rem;
   }
-
+}
 
 /* No Results Styling */
 .no-results {
