@@ -109,7 +109,7 @@ body {
   padding: 15px 0; /* Changed padding */
   margin-bottom: 0; /* Removed margin */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  position: fixed; /* Made sticky */
+  position: absolute; /* Made sticky */
   top: 40px; /* Set to 0px from top */
   left: 0;
   right: 0;
