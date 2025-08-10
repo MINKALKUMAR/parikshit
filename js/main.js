@@ -1117,6 +1117,9 @@ function filterRooms() {
     const gender = document.getElementById('gender').value;
     const price = document.getElementById('price').value;
 
+    // Reset pagination when filters change
+    currentlyDisplayed = 0;
+    
     filteredRooms = roomData.filter(room => {
         // Location filter
         if (location !== 'all' &&
@@ -1156,17 +1159,32 @@ function filterRooms() {
         return true;
     });
 
+    // Generate new cards with the filtered results
     generateCards(filteredRooms);
+    
+    // Ensure lazy loading works for the new content
+    lazyLoadImages();
 }
 
 // Reset filters
 function resetFilters() {
+    // Reset all filter dropdowns to 'all'
     document.getElementById('location').value = 'all';
     document.getElementById('bhk').value = 'all';
     document.getElementById('gender').value = 'all';
     document.getElementById('price').value = 'all';
+    
+    // Reset pagination
+    currentlyDisplayed = 0;
+    
+    // Reset filtered rooms to show all
     filteredRooms = [...roomData];
+    
+    // Regenerate cards with all properties
     generateCards(filteredRooms);
+    
+    // Ensure lazy loading works for the new content
+    lazyLoadImages();
 }
 
 // Load more rooms
@@ -1223,34 +1241,37 @@ function lazyLoadImages() {
 document.addEventListener('DOMContentLoaded', () => {
     // Sort roomData in descending order by ID to show newest properties first
     roomData.sort((a, b) => b.id - a.id);
+    
+    // Initialize filteredRooms with a copy of the sorted roomData
     filteredRooms = [...roomData];
+    
+    // Generate initial cards
     generateCards(filteredRooms);
     
-    // Initialize lazy loading after initial render
+    // Initialize lazy loading
     lazyLoadImages();
-
-    // Event listeners
-    document.getElementById('applyFilters').addEventListener('click', () => {
-        filterRooms();
-        lazyLoadImages(); // Re-initialize lazy loading after filtering
+    
+    // Add event listeners
+    document.getElementById('resetFilters').addEventListener('click', resetFilters);
+    document.getElementById('moreRoomsBtn').addEventListener('click', loadMoreRooms);
+    
+    // Get all filter elements
+    const locationFilter = document.getElementById('location');
+    const bhkFilter = document.getElementById('bhk');
+    const genderFilter = document.getElementById('gender');
+    const priceFilter = document.getElementById('price');
+    
+    // Add change event listeners to all filters
+    [locationFilter, bhkFilter, genderFilter, priceFilter].forEach(filter => {
+        if (filter) {
+            filter.addEventListener('change', () => {
+                // Add a small delay to ensure all filters are updated
+                setTimeout(filterRooms, 50);
+            });
+        }
     });
     
-    document.getElementById('resetFilters').addEventListener('click', () => {
-        resetFilters();
-        lazyLoadImages(); // Re-initialize lazy loading after reset
-    });
-    
-    document.getElementById('moreRoomsBtn').addEventListener('click', () => {
-        loadMoreRooms();
-        lazyLoadImages(); // Re-initialize lazy loading after loading more
-    });
-    
-    // Filter change listeners
-    document.getElementById('location').addEventListener('change', filterRooms);
-    document.getElementById('bhk').addEventListener('change', filterRooms);
-    document.getElementById('gender').addEventListener('change', filterRooms);
-    
-    // Listen for changes to the DOM to handle dynamically added content
+    // Add mutation observer for lazy loading dynamically added content
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
             if (mutation.addedNodes.length) {
@@ -1259,6 +1280,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Start observing the document with the configured parameters
     observer.observe(document.body, { childList: true, subtree: true });
 });
