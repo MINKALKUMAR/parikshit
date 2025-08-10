@@ -1008,7 +1008,7 @@ function initSlider(sliderContainer) {
     let currentIndex = 0;
     const totalMedia = mediaElements.length;
     let autoSlideInterval;
-    const SLIDE_INTERVAL = 3000; // 3 seconds between slides for images
+    const SLIDE_INTERVAL = 6000; // 3 seconds between slides for images
 
     let currentVideoElement = null; // To keep track of the currently playing video
 
