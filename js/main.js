@@ -1415,6 +1415,15 @@ function generateCards(rooms, append = false) {
 
         // Initialize slider for this card
         initSlider(cardEl.querySelector('.slider-container'));
+
+        // Add click event to open zoom modal
+        const sliderImages = cardEl.querySelectorAll('.slider img');
+        sliderImages.forEach((img, index) => {
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openZoomModal(room.media, index);
+            });
+        });
     });
 
     currentlyDisplayed = endIndex;
@@ -1717,8 +1726,200 @@ function setupPidSearch() {
     });
 }
 
+// Image Zoom Functionality
+let currentZoomedImageIndex = 0;
+let currentRoomMedia = [];
+let isZoomed = false;
+
+function openZoomModal(mediaArray, index) {
+    const modal = document.getElementById('zoomModal');
+    const modalContent = modal.querySelector('.zoom-modal-content');
+    const zoomButton = modal.querySelector('.zoom-zoom');
+    
+    currentRoomMedia = mediaArray;
+    currentZoomedImageIndex = index;
+    
+    // Update modal content with current media
+    updateZoomModalContent();
+    
+    // Show modal with animation
+    modal.style.display = 'flex';
+    setTimeout(() => modal.classList.add('show'), 10);
+    
+    // Update zoom button text
+    updateZoomButtonText();
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+function closeZoomModal() {
+    const modal = document.getElementById('zoomModal');
+    modal.classList.remove('show');
+    
+    // Allow body scroll when modal is closed
+    document.body.style.overflow = 'auto';
+    
+    // Reset zoom state
+    isZoomed = false;
+    const modalContent = modal.querySelector('.zoom-modal-content');
+    modalContent.classList.remove('zoomed');
+    
+    // Hide modal after animation
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+}
+
+function updateZoomModalContent() {
+    const modal = document.getElementById('zoomModal');
+    const modalContent = modal.querySelector('.zoom-modal-content');
+    const currentMedia = currentRoomMedia[currentZoomedImageIndex];
+    
+    // Clear previous content
+    modalContent.innerHTML = '';
+    
+    // Create and append media element
+    if (currentMedia.type === 'image') {
+        const img = document.createElement('img');
+        img.src = currentMedia.src;
+        img.alt = 'Property image';
+        img.loading = 'eager';
+        modalContent.appendChild(img);
+    } else if (currentMedia.type === 'video') {
+        const video = document.createElement('video');
+        video.src = currentMedia.src;
+        video.controls = true;
+        video.autoplay = true;
+        modalContent.appendChild(video);
+    }
+    
+    // Reset zoom state when changing images
+    isZoomed = false;
+    modalContent.classList.remove('zoomed');
+    updateZoomButtonText();
+}
+
+function updateZoomButtonText() {
+    const zoomButton = document.querySelector('.zoom-zoom');
+    if (zoomButton) {
+        const icon = zoomButton.querySelector('i');
+        if (isZoomed) {
+            icon.className = 'fas fa-search-minus';
+            zoomButton.innerHTML = '<i class="fas fa-search-minus"></i> Click to Zoom Out';
+        } else {
+            icon.className = 'fas fa-search-plus';
+            zoomButton.innerHTML = '<i class="fas fa-search-plus"></i> Click to Zoom In';
+        }
+    }
+}
+
+function navigateZoom(direction) {
+    if (direction === 'prev') {
+        currentZoomedImageIndex = (currentZoomedImageIndex - 1 + currentRoomMedia.length) % currentRoomMedia.length;
+    } else {
+        currentZoomedImageIndex = (currentZoomedImageIndex + 1) % currentRoomMedia.length;
+    }
+    updateZoomModalContent();
+}
+
+function toggleZoom() {
+    const modalContent = document.querySelector('.zoom-modal-content');
+    isZoomed = !isZoomed;
+    
+    if (isZoomed) {
+        modalContent.classList.add('zoomed');
+    } else {
+        modalContent.classList.remove('zoomed');
+    }
+    
+    updateZoomButtonText();
+}
+
 // Initialize the page when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Zoom Modal Event Listeners
+    const zoomModal = document.getElementById('zoomModal');
+    const zoomClose = document.querySelector('.zoom-close');
+    const zoomPrev = document.querySelector('.zoom-prev');
+    const zoomNext = document.querySelector('.zoom-next');
+    const zoomButton = document.querySelector('.zoom-zoom');
+    
+    // Close modal when clicking the close button or outside the content
+    zoomClose.addEventListener('click', closeZoomModal);
+    zoomModal.addEventListener('click', (e) => {
+        if (e.target === zoomModal) {
+            closeZoomModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && zoomModal.classList.contains('show')) {
+            closeZoomModal();
+        }
+    });
+    
+    // Navigation buttons
+    zoomPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navigateZoom('prev');
+    });
+    
+    zoomNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navigateZoom('next');
+    });
+    
+    // Toggle zoom
+    zoomButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleZoom();
+    });
+    
+    // Handle keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!zoomModal.classList.contains('show')) return;
+        
+        switch(e.key) {
+            case 'ArrowLeft':
+                navigateZoom('prev');
+                break;
+            case 'ArrowRight':
+                navigateZoom('next');
+                break;
+            case ' ':
+            case 'Enter':
+                e.preventDefault();
+                toggleZoom();
+                break;
+        }
+    });
+    
+    // Handle touch events for mobile zoom
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    zoomModal.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+    
+    zoomModal.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+    
+    function handleSwipe() {
+        const swipeThreshold = 50; // Minimum distance to consider it a swipe
+        
+        if (touchStartX - touchEndX > swipeThreshold) {
+            // Swipe left - go to next
+            navigateZoom('next');
+        } else if (touchEndX - touchStartX > swipeThreshold) {
+            // Swipe right - go to previous
+            navigateZoom('prev');
+        }
+    }
     // Sort roomData in descending order by ID to show newest properties first
     roomData.sort((a, b) => b.id - a.id);
     
