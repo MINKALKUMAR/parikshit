@@ -459,7 +459,7 @@ const roomData = [
             ]
         },
         {
-            id: 24,
+            id: 23,
             pid: "C16AC941",
             title: "1 BHK in Sector 16A, Chandigarh",
             location: "Sector 16A,Chandigarh",
@@ -484,7 +484,7 @@ const roomData = [
             ]
         },
         {
-            id: 25,
+            id: 24,
             pid: "C27DS790",
             title: "1 BHK in Sector 27D, Chandigarh",
             location: "Sector 27D,Chandigarh",
@@ -500,7 +500,7 @@ const roomData = [
             ]
         },
         {
-            id: 26,
+            id: 25,
             pid: "C22CA991",
             title: "2 BHK in Sector 22C, Chandigarh",
             location: "Sector 22C,Chandigarh",
@@ -518,7 +518,7 @@ const roomData = [
             ]
         },
         {
-            id: 27,
+            id: 26,
             pid: "M66L887",
             title: "1 BHK in Sector 66, Mohali",
             location: "Sector 66,Mohali",
@@ -535,7 +535,7 @@ const roomData = [
             ]
         },
         {
-            id: 29,
+            id: 27,
             pid: "M59V902",
             title: "2 BHK in Sector 59, Mohali",
             location: "Sector 59,Mohali",
@@ -549,7 +549,7 @@ const roomData = [
             ]
         },
         {
-            id: 30,
+            id: 28,
             pid: "MP1A964",
             title: "2 BHK in Phase 1, Mohali",
             location: "Phase 1,Mohali",
@@ -566,7 +566,7 @@ const roomData = [
             ]
         },
         {
-            id: 31,
+            id: 29,
             pid: "M62M981",
             title: "Room with Kitchen in Sector 62, Mohali",
             location: "Sector 62,Mohali",
@@ -580,7 +580,7 @@ const roomData = [
             ]
         },
         {
-            id: 33,
+            id: 30,
             pid: "C41DS628",
             title: "Room with Kitchen in Sector 41D, Chandigarh",
             location: "Sector 41D,Chandigarh",
@@ -598,7 +598,7 @@ const roomData = [
             ]
         },
         {
-            id: 34,
+            id: 31,
             pid: "MBR836",
             title: "Room with Kitchen in Balongi, Mohali",
             location: "Balongi,Mohali",
@@ -617,7 +617,7 @@ const roomData = [
             ]
         },
         {
-            id: 35,
+            id: 32,
             pid: "M61A987",
             title: "2 BHK in Sector 61, Mohali",
             location: "Sector 61,Mohali",
@@ -636,7 +636,7 @@ const roomData = [
             ]
         },
         {
-            id: 36,
+            id: 33,
             pid: "M55K814",
             title: "Room with Kitchen in Sector 55, Mohali",
             location: "Sector 55,Mohali",
@@ -654,7 +654,7 @@ const roomData = [
             ]
         },
         {
-            id: 37,
+            id: 34,
             pid: "MARJ798",
             title: "3 BHK in Airport Road, Mohali",
             location: "Airport Road,Mohali",
@@ -681,7 +681,7 @@ const roomData = [
             ]
         },
         {
-            id: 38,
+            id: 35,
             pid: "C37CM700",
             title: "2 BHK in Sector 37C, Chandigarh",
             location: "Sector 37C,Chandigarh",
@@ -698,7 +698,7 @@ const roomData = [
             ]
         },
         {
-            id: 39,
+            id: 36,
             pid: "MARS880",
             title: "3 BHK in Airport Road, Mohali",
             location: "Airport Road,Mohali",
@@ -728,7 +728,7 @@ const roomData = [
             ]
         },
         {
-            id: 40,
+            id: 37,
             pid: "M91U998",
             title: "Room in Sector 91, Mohali",
             location: "Sector 91,Mohali",
@@ -749,7 +749,7 @@ const roomData = [
             ]
         },
         {
-            id: 47,
+            id: 38,
             pid: "M66BS987",
             title: "2 BHK in Sector 66B, Mohali",
             location: "Sector 66B,Mohali",
@@ -774,7 +774,7 @@ const roomData = [
             ]
         },
         {
-            id: 48,
+            id: 39,
             pid: "M88R981",
             title: "Room in Sector 88, Mohali",
             location: "Sector 88,Mohali",
@@ -797,7 +797,7 @@ const roomData = [
             ]
         },
         {
-            id: 49,
+            id: 40,
             pid: "M117H920",
             title: "3 BHK in Sector 117, Mohali",
             location: "Sector 117,Mohali",
@@ -827,7 +827,7 @@ const roomData = [
             ]
         },
         {
-            id: 50,
+            id: 41,
             pid: "MLP858",
             title: "Room with Kitchen in Landran, Mohali",
             location: "Landran,Mohali",
@@ -839,7 +839,453 @@ const roomData = [
             media: [
                 {type : "video",src : "https://ik.imagekit.io/minkal/assets/56.MLP858/S1.mp4?updatedAt=1754852678400"},
             ]
-        }
+        },
+         {
+            id: 42,
+            pid: "M61-765",
+            title: "Room with Kitchen in Sector 61, Mohali",
+            location: "Sector 61,Mohali",
+            type: "Room with Kitchen",
+            gender: "for-all",
+            price: "₹12,000",
+            features: ["Fridge", "Fully Furnished"],
+            description: "This Room with Kitchen property is located in Sector 61, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/57.M61-765/A%20(1).jpeg?updatedAt=1754929764327" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/57.M61-765/A%20(2).jpeg?updatedAt=1754929764327" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/57.M61-765/A%20(3).jpeg?updatedAt=1754929764327" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/57.M61-765/A%20(4).jpeg?updatedAt=1754929764327" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/57.M61-765/A%20(5).jpeg?updatedAt=1754929764327" },
+            ]
+        },
+        {
+            id: 43,
+            pid: "M126-998",
+            title: "2 BHK in Sector 126, Mohali",
+            location: "Sector 126,Mohali",
+            type: "2 BHK",
+            gender: "for-all",
+            price: "₹12,000",
+            features: ["Independent", "Ownerfree", "Fully Furnished"],
+            description: "This 2 BHK property is located in Sector 126, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/58.M126-998/A%20(1).jpeg?updatedAt=1754929770040" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/58.M126-998/A%20(2).jpeg?updatedAt=1754929770040" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/58.M126-998/A%20(3).jpeg?updatedAt=1754929770040" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/58.M126-998/A%20(4).jpeg?updatedAt=1754929770040" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/58.M126-998/A%20(5).jpeg?updatedAt=1754929770040" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/58.M126-998/A%20(6).jpeg?updatedAt=1754929770040" },
+            ]
+        },
+        {
+            id: 44,
+            pid: "M79T828",
+            title: "3 BHK in Sector 79, Mohali",
+            location: "Sector 79,Mohali",
+            type: "3 BHK",
+            gender: "family",
+            price: "₹27,000",
+            features: ["Fully Furnished", "AC", "Fridge"],
+            description: "This 3 BHK property is located in Sector 79, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(1).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(2).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(3).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(4).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(5).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(6).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(7).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(8).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(9).jpeg?updatedAt=1754929776410" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/59.M79T828/A%20(10).jpeg?updatedAt=1754929776410" }
+            ]
+        },
+        {
+            id: 45,
+            pid: "M79T2828",
+            title: "2 BHK in Sector 79, Mohali",
+            location: "Sector 79,Mohali",
+            type: "2 BHK",
+            gender: "family",
+            price: "₹14,000",
+            features: ["Fully Furnished", "Independent", "AC", "RO", "Fridge"],
+            description: "This 2 BHK property is located in Sector 79, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(1).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(2).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(3).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(4).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(5).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(6).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(7).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(8).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(9).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(10).jpeg?updatedAt=1754929783308" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/60.M79T2828/A%20(11).jpeg?updatedAt=1754929783308" },
+            ]
+        },
+        {
+            id: 46,
+            pid: "C43P826",
+            title: "Room in Sector 43, Chandigarh",
+            location: "Sector 43,Chandigarh",
+            type: "Room",
+            gender: "for-all",
+            price: "₹10,500",
+            features: ["Fully Furnished", "Independent"],
+            description: "This Room property is located in Sector 43, Chandigarh.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/61.C43P826/A%20(1).jpeg?updatedAt=1754929790725" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/61.C43P826/A%20(2).jpeg?updatedAt=1754929790725" }
+            ]
+        },
+        {
+            id: 47,
+            pid: "M94S987",
+            title: "2 BHK in Sector 94, Mohali",
+            location: "Sector 94,Mohali",
+            type: "2 BHK",
+            gender: "family",
+            price: "₹27,000",
+            features: ["Fully Furnished", "Independent", "AC", "Fridge"],
+            description: "This 2 BHK property is located in Sector 94, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/62.M94S987/A%20(1).jpeg?updatedAt=1754929806086" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/62.M94S987/A%20(2).jpeg?updatedAt=1754929806086" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/62.M94S987/A%20(3).jpeg?updatedAt=1754929806086" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/62.M94S987/A%20(4).jpeg?updatedAt=1754929806086" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/62.M94S987/A%20(5).jpeg?updatedAt=1754929806086" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/62.M94S987/A%20(6).jpeg?updatedAt=1754929806086" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/62.M94S987/A%20(7).jpeg?updatedAt=1754929806086" },
+            ]
+        },
+        {
+            id: 48,
+            pid: "M60B790",
+            title: "2 BHK in Sector 60, Mohali",
+            location: "Sector 60,Mohali",
+            type: "2 BHK",
+            gender: "for-all",
+            price: "₹24,000",
+            features: ["Independent", "Fully Furnished", "AC"],
+            description: "This 2 BHK property is located in Sector 60, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(1).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(2).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(3).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(4).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(5).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(6).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(7).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(8).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(9).jpeg?updatedAt=1754929803609" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/63.M60B790/A%20(10).jpeg?updatedAt=1754929803609" },
+            ]
+        },
+        {
+            id: 49,
+            pid: "M126J998",
+            title: "2 BHK in Sector 126, Mohali",
+            location: "Sector 126,Mohali",
+            type: "2 BHK",
+            gender: "for-all",
+            price: "₹16,000",
+            features: ["Fully Furnished", "AC", "Fridge"],
+            description: "This 2 BHK property is located in Sector 126, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(1).jpeg?updatedAt=1754929817345" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(2).jpeg?updatedAt=1754929817345" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(3).jpeg?updatedAt=1754929817345" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(4).jpeg?updatedAt=1754929817345" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(5).jpeg?updatedAt=1754929817345" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(6).jpeg?updatedAt=1754929817345" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(7).jpeg?updatedAt=1754929817345" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/64.M126J998/A%20(8).jpeg?updatedAt=1754929817345" },
+            ]
+        },
+        {
+            id: 50,
+            pid: "M52M987",
+            title: "2 RK in Sector 52, Mohali",
+            location: "Sector 52,Mohali",
+            type: "2 RK",
+            gender: "for-all",
+            price: "₹15,000",
+            features: ["Independent", "Ownerfree", "Fully Furnished"],
+            description: "This 2 RK property is located in Sector 52, Mohali.",
+            media: [
+                { type: "video", src: "https://ik.imagekit.io/minkal/assets/65.M52M987/A.mp4?updatedAt=1754929839469" }
+            ]
+        },
+        {
+            id: 51,
+            pid: "M61J946",
+            title: "1 BHK in Sector 61, Mohali",
+            location: "Sector 61,Mohali",
+            type: "1 BHK",
+            gender: "for-all",
+            price: "₹16,500",
+            features: ["Fridge", "Fully Furnished"],
+            description: "This 1 BHK property is located in Sector 61, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(1).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(2).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(3).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(4).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(5).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(6).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(7).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(8).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(9).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(10).jpeg?updatedAt=1754929825083" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/66.M61J946/A%20(11).jpeg?updatedAt=1754929825083" },
+            ]
+        },
+        {
+            id: 52,
+            pid: "M126B987",
+            title: "2 BHK in Sector 126, Mohali",
+            location: "Sector 126,Mohali",
+            type: "2 BHK",
+            gender: "for-all",
+            price: "₹14,800",
+            features: ["Fully Furnished", "Independent"],
+            description: "This 2 BHK property is located in Sector 126, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/67.M126B987/A%20(1).jpeg?updatedAt=1754929833053" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/67.M126B987/A%20(2).jpeg?updatedAt=1754929833053" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/67.M126B987/A%20(3).jpeg?updatedAt=1754929833053" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/67.M126B987/A%20(4).jpeg?updatedAt=1754929833053" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/67.M126B987/A%20(5).jpeg?updatedAt=1754929833053" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/67.M126B987/A%20(6).jpeg?updatedAt=1754929833053" },
+            ]
+        },
+        {
+            id: 53,
+            pid: "M59-921",
+            title: "PG in Sector 59, Mohali",
+            location: "Sector 59,Mohali",
+            type: "PG",
+            gender: "girls",
+            price: "₹6,500",
+            features: ["Fully Furnished"],
+            description: "This PG property is located in Sector 59, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(1).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(2).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(3).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(4).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(5).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(6).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(7).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(8).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(9).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(10).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(11).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(12).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(13).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(14).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(15).jpeg?updatedAt=1754929839459" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/68.M59-921/A%20(16).jpeg?updatedAt=1754929839459" },
+                 
+            ]
+        },
+        {
+            id: 54,
+            pid: "MIBS828",
+            title: "3 BHK in I Block Aerocity, Mohali",
+            location: "I Block Aerocity,Mohali",
+            type: "3 BHK",
+            gender: "for-all",
+            price: "₹25,000",
+            features: ["Fully Furnished", "Owner Free"],
+            description: "This 3 BHK property is located in I Block Aerocity, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(1).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(2).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(3).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(4).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(5).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(6).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(7).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(8).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(9).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(10).jpeg?updatedAt=1754929845097" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/69.MIBS828/A%20(11).jpeg?updatedAt=1754929845097" },
+            ]
+        },
+        {
+            id: 55,
+            pid: "M59A969",
+            title: "Room with Kitchen in Sector 59, Mohali",
+            location: "Sector 59,Mohali",
+            type: "Room with Kitchen",
+            gender: "girls",
+            price: "₹5,000",
+            features: ["Fully Furnished"],
+            description: "This Room with Kitchen property is located in Sector 59, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/70.M59A969/A1.jpeg?updatedAt=1754929849384" },
+                { type: "video", src: "https://ik.imagekit.io/minkal/assets/70.M59A969/A2.mp4?updatedAt=1754929860758" },
+            ]
+        },
+        {
+            id: 56,
+            pid: "MCBV842",
+            title: "2 BHK in C Block Aerocity, Mohali",
+            location: "C Block Aerocity,Mohali",
+            type: "2 BHK",
+            gender: "family",
+            price: "₹21,000",
+            features: ["Unfurnished", "Independent"],
+            description: "This 2 BHK property is located in C Block Aerocity, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(1).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(2).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(3).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(4).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(5).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(6).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(7).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(8).jpeg?updatedAt=1754929852619" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/71.MCBV842/A%20(9).jpeg?updatedAt=1754929852619" },
+            ]
+        },
+        {
+            id: 57,
+            pid: "M118-781",
+            title: "Room with Kitchen in Sector 118, Mohali",
+            location: "Sector 118,Mohali",
+            type: "Room with Kitchen",
+            gender: "for-all",
+            price: "₹10,000",
+            features: ["Fully Furnished", "Independent", "Owner free"],
+            description: "This Room with Kitchen property is located in Sector 118, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/placeholder.jpg" }
+            ]
+        },
+        {
+            id: 58,
+            pid: "C37DR987",
+            title: "Room with Kitchen in Sector 37D, Chandigarh",
+            location: "Sector 37D,Chandigarh",
+            type: "Room with Kitchen",
+            gender: "girls",
+            price: "₹8,000",
+            features: ["Fully Furnished", "Independent"],
+            description: "This Room with Kitchen property is located in Sector 37D, Chandigarh.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/73.C37DR987/A%20(1).jpeg?updatedAt=1754929731774" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/73.C37DR987/A%20(2).jpeg?updatedAt=1754929731774" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/73.C37DR987/A%20(3).jpeg?updatedAt=1754929731774" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/73.C37DR987/A%20(4).jpeg?updatedAt=1754929731774" },
+            ]
+        },
+        {
+            id: 59,
+            pid: "C23DS904",
+            title: "Room with Kitchen in Sector 23D, Chandigarh",
+            location: "Sector 23D,Chandigarh",
+            type: "Room with Kitchen",
+            gender: "for-all",
+            price: "₹13,000",
+            features: ["Fully Furnished", "Independent"],
+            description: "This Room with Kitchen property is located in Sector 23D, Chandigarh.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/74.C23DS904/A%20(1).jpeg?updatedAt=1754929744536" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/74.C23DS904/A%20(2).jpeg?updatedAt=1754929744536" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/74.C23DS904/A%20(3).jpeg?updatedAt=1754929744536" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/74.C23DS904/A%20(4).jpeg?updatedAt=1754929744536" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/74.C23DS904/A%20(5).jpeg?updatedAt=1754929744536" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/74.C23DS904/A%20(6).jpeg?updatedAt=1754929744536" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/74.C23DS904/A%20(7).jpeg?updatedAt=1754929744536" },
+            ]
+        },
+        {
+            id: 60,
+            pid: "M70R991",
+            title: "Room with Kitchen in Sector 70, Mohali",
+            location: "Sector 70,Mohali",
+            type: "Room with Kitchen",
+            gender: "for-all",
+            price: "₹6,000",
+            features: ["Furnished", "Independent"],
+            description: "This Room with Kitchen property is located in Sector 70, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(1).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(2).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(3).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(4).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(5).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(6).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(7).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(8).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(9).jpeg?updatedAt=1754929738916" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/75.M70R991/A%20(10).jpeg?updatedAt=1754929738916" },
+            ]
+        },
+        {
+            id: 61,
+            pid: "M117S931",
+            title: "Room with Kitchen in Sector 117, Mohali",
+            location: "Sector 117,Mohali",
+            type: "Room with Kitchen",
+            gender: "for-all",
+            price: "₹11,000",
+            features: ["Furnished", "Independent"],
+            description: "This Room with Kitchen property is located in Sector 117, Mohali.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/76.M117S931/A%20(1).jpeg?updatedAt=1754929753231" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/76.M117S931/A%20(2).jpeg?updatedAt=1754929753231" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/76.M117S931/A%20(3).jpeg?updatedAt=1754929753231" },
+                { type: "video", src: "https://ik.imagekit.io/minkal/assets/76.M117S931/A%20(4).mp4?updatedAt=1754929784472" },
+            ]
+        },
+        {
+            id: 62,
+            pid: "C44CV980",
+            title: "1 BHK in Sector 44C, Chandigarh",
+            location: "Sector 44C,Chandigarh",
+            type: "1 BHK",
+            gender: "for-all",
+            price: "₹22,500",
+            features: ["Furnished", "Independent"],
+            description: "This 1 BHK property is located in Sector 44C, Chandigarh.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/77.C44CV980/A%20(1).jpeg?updatedAt=1754929752219" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/77.C44CV980/A%20(2).jpeg?updatedAt=1754929752219" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/77.C44CV980/A%20(3).jpeg?updatedAt=1754929752219" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/77.C44CV980/A%20(4).jpeg?updatedAt=1754929752219" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/77.C44CV980/A%20(5).jpeg?updatedAt=1754929752219" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/77.C44CV980/A%20(6).jpeg?updatedAt=1754929752219" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/77.C44CV980/A%20(7).jpeg?updatedAt=1754929752219" },
+            ]
+        },
+        {
+            id: 62,
+            pid: "C45AH814",
+            title: "1 BHK in Sector 45A, Chandigarh",
+            location: "Sector 45A,Chandigarh",
+            type: "1 BHK",
+            gender: "for-all",
+            price: "₹20,000",
+            features: ["Furnished", "Independent"],
+            description: "This 1 BHK property is located in Sector 45A, Chandigarh.",
+            media: [
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(1).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(2).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(3).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(4).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(5).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(6).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(7).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(8).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(9).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(10).jpeg?updatedAt=1754929758212" },
+                { type: "image", src: "https://ik.imagekit.io/minkal/assets/78.C45AH814/A%20(11).jpeg?updatedAt=1754929758212" },
+            ]
+        },
 ];
 
 // Pagination variables
@@ -1122,9 +1568,12 @@ function filterRooms() {
     
     filteredRooms = roomData.filter(room => {
         // Location filter
-        if (location !== 'all' &&
-            !room.location.toLowerCase().includes(location.replace('-', ' '))) {
-            return false;
+        if (location !== 'all') {
+            const normalizedLocation = location.replace(/-/g, ' ');
+            const normalizedRoomLocation = room.location.toLowerCase().replace(/-/g, ' ');
+            if (!normalizedRoomLocation.includes(normalizedLocation)) {
+                return false;
+            }
         }
 
         // Type filter - FIXED: Now uses exact matching
