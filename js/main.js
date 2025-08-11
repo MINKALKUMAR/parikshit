@@ -1556,12 +1556,13 @@ function initSlider(sliderContainer) {
     });
 }
 
-// Filter functionality - UPDATED with new logic for FOR ALL option
+// Filter functionality - UPDATED with new logic for FOR ALL option and PID search
 function filterRooms() {
     const location = document.getElementById('location').value;
     const type = document.getElementById('bhk').value;
     const gender = document.getElementById('gender').value;
     const price = document.getElementById('price').value;
+    const pidSearch = document.getElementById('pidSearch').value.trim().toUpperCase();
 
     // Reset pagination when filters change
     currentlyDisplayed = 0;
@@ -1604,6 +1605,11 @@ function filterRooms() {
             if (price === '<=30000' && roomPrice > 30000) return false;
             if (price === '>=30000' && roomPrice < 30000) return false;
         }
+        
+        // PID search filter
+        if (pidSearch && !room.pid.includes(pidSearch)) {
+            return false;
+        }
 
         return true;
     });
@@ -1617,11 +1623,12 @@ function filterRooms() {
 
 // Reset filters
 function resetFilters() {
-    // Reset all filter dropdowns to 'all'
+    // Reset all filter dropdowns to 'all' and clear search
     document.getElementById('location').value = 'all';
     document.getElementById('bhk').value = 'all';
     document.getElementById('gender').value = 'all';
     document.getElementById('price').value = 'all';
+    document.getElementById('pidSearch').value = '';
     
     // Reset pagination
     currentlyDisplayed = 0;
@@ -1686,10 +1693,37 @@ function lazyLoadImages() {
     });
 }
 
+// Add event listener for PID search input to trigger filtering
+function setupPidSearch() {
+    const pidSearch = document.getElementById('pidSearch');
+    let searchTimeout;
+    
+    pidSearch.addEventListener('input', () => {
+        // Clear previous timeout to avoid rapid firing
+        clearTimeout(searchTimeout);
+        
+        // Set a new timeout to trigger filtering after user stops typing (500ms delay)
+        searchTimeout = setTimeout(() => {
+            filterRooms();
+        }, 500);
+    });
+    
+    // Also trigger search on pressing Enter
+    pidSearch.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            clearTimeout(searchTimeout);
+            filterRooms();
+        }
+    });
+}
+
 // Initialize the page when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Sort roomData in descending order by ID to show newest properties first
     roomData.sort((a, b) => b.id - a.id);
+    
+    // Set up PID search functionality
+    setupPidSearch();
     
     // Initialize filteredRooms with a copy of the sorted roomData
     filteredRooms = [...roomData];
