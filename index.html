@@ -90,59 +90,90 @@
             <div class="filters-grid">
                 <div class="filter-group">
                     <label for="location"><i class="fas fa-map-marker-alt"></i> Select Location</label>
-                    <select id="location" class="filter-select">
-                        <option value="all">All Locations</option>
-                        <!-- Mohali Locations -->
-                        <option value="airport-road,mohali">Airport Road,Mohali</option>
-                        <option value="balongi,mohali">Balongi,Mohali</option>
-                        <option value="landran,mohali">Landran,Mohali</option>
-                        <option value="phase-1,mohali">Phase 1,Mohali</option>
-                        <option value="sector-55,mohali">Sector 55,Mohali</option>
-                        <option value="sector-59,mohali">Sector 59,Mohali</option>
-                        <option value="sector-60,mohali">Sector 60,Mohali</option>
-                        <option value="sector-61,mohali">Sector 61,Mohali</option>
-                        <option value="sector-62,mohali">Sector 62,Mohali</option>
-                        <option value="sector-63,mohali">Sector 63,Mohali</option>
-                        <option value="sector-64,mohali">Sector 64,Mohali</option>
-                        <option value="sector-66,mohali">Sector 66,Mohali</option>
-                        <option value="sector-66b,mohali">Sector 66B,Mohali</option>
-                        <option value="sector-67,mohali">Sector 67,Mohali</option>
-                        <option value="sector-68,mohali">Sector 68,Mohali</option>
-                        <option value="sector-70,mohali">Sector 70,Mohali</option>
-                        <option value="sector-82,mohali">Sector 82,Mohali</option>
-                        <option value="sector-88,mohali">Sector 88,Mohali</option>
-                        <option value="sector-89,mohali">Sector 89,Mohali</option>
-                        <option value="sector-91,mohali">Sector 91,Mohali</option>
-                        <option value="sector-94,mohali">Sector 94,Mohali</option> <!-- New -->
-                        <option value="sector-52,mohali">Sector 52,Mohali</option> <!-- New -->
-                        <option value="sector-79,mohali">Sector 79,Mohali</option> <!-- New -->
-                        <option value="sector-118,mohali">Sector 118,Mohali</option> <!-- New -->
-                        <option value="sector-114,mohali">Sector 114,Mohali</option>
-                        <option value="sector-116,mohali">Sector 116,Mohali</option>
-                        <option value="sector-117,mohali">Sector 117,Mohali</option>
-                        <option value="sector-126,mohali">Sector 126,Mohali</option>
-                        <option value="sector-127,mohali">Sector 127,Mohali</option>
-                        <option value="i-block-aerocity,mohali">I Block Aerocity,Mohali</option> <!-- New -->
-                        <option value="c-block-aerocity,mohali">C Block Aerocity,Mohali</option> <!-- New -->
-                        <!-- Chandigarh Locations -->
-                        <option value="sector-1,chandigarh">Sector 1,Chandigarh</option>
-                        <option value="sector-15d,chandigarh">Sector 15D,Chandigarh</option>
-                        <option value="sector-16a,chandigarh">Sector 16A,Chandigarh</option>
-                        <option value="sector-19c,chandigarh">Sector 19C,Chandigarh</option>
-                        <option value="sector-20a,chandigarh">Sector 20A,Chandigarh</option>
-                        <option value="sector-22c,chandigarh">Sector 22C,Chandigarh</option>
-                        <option value="sector-23d,chandigarh">Sector 23D,Chandigarh</option>
-                        <option value="sector-27d,chandigarh">Sector 27D,Chandigarh</option>
-                        <option value="sector-33b,chandigarh">Sector 33B,Chandigarh</option>
-                        <option value="sector-33c,chandigarh">Sector 33C,Chandigarh</option>
-                        <option value="sector-37c,chandigarh">Sector 37C,Chandigarh</option>
-                        <option value="sector-37d,chandigarh">Sector 37D,Chandigarh</option> <!-- New -->
-                        <option value="sector-41b,chandigarh">Sector 41B,Chandigarh</option>
-                        <option value="sector-41d,chandigarh">Sector 41D,Chandigarh</option>
-                        <option value="sector-43,chandigarh">Sector 43,Chandigarh</option> <!-- New -->
-                        <option value="sector-44c,chandigarh">Sector 44C,Chandigarh</option> <!-- New -->
-                        <option value="sector-45a,chandigarh">Sector 45A,Chandigarh</option> <!-- New -->
-                    </select>
+                    <div class="multiselect">
+                        <div class="select-box" onclick="toggleDropdown('location')">
+                            <div class="selected-options" id="location-selected-text">Select Locations</div>
+                            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="options-container" id="location-options">
+                            <div class="option-group">
+                                <div class="group-label">Mohali Locations</div>
+                                <div class="option" data-value="airport-road,mohali">Airport Road,Mohali</div>
+                                <div class="option" data-value="balongi,mohali">Balongi,Mohali</div>
+                                <div class="option" data-value="c-block-aerocity,mohali">C Block Aerocity,Mohali</div>
+                                <div class="option" data-value="i-block-aerocity,mohali">I Block Aerocity,Mohali</div>
+                                <div class="option" data-value="landran,mohali">Landran,Mohali</div>
+                                <div class="option" data-value="phase-1,mohali">Phase 1,Mohali</div>
+                                <div class="option" data-value="sector-52,mohali">Sector 52,Mohali</div>
+                                <div class="option" data-value="sector-55,mohali">Sector 55,Mohali</div>
+                                <div class="option" data-value="sector-56,mohali">Sector 56,Mohali</div>
+                                <div class="option" data-value="sector-57,mohali">Sector 57,Mohali</div>
+                                <div class="option" data-value="sector-59,mohali">Sector 59,Mohali</div>
+                                <div class="option" data-value="sector-60,mohali">Sector 60,Mohali</div>
+                                <div class="option" data-value="sector-61,mohali">Sector 61,Mohali</div>
+                                <div class="option" data-value="sector-62,mohali">Sector 62,Mohali</div>
+                                <div class="option" data-value="sector-63,mohali">Sector 63,Mohali</div>
+                                <div class="option" data-value="sector-64,mohali">Sector 64,Mohali</div>
+                                <div class="option" data-value="sector-66,mohali">Sector 66,Mohali</div>
+                                <div class="option" data-value="sector-66b,mohali">Sector 66B,Mohali</div>
+                                <div class="option" data-value="sector-67,mohali">Sector 67,Mohali</div>
+                                <div class="option" data-value="sector-68,mohali">Sector 68,Mohali</div>
+                                <div class="option" data-value="sector-69,mohali">Sector 69,Mohali</div>
+                                <div class="option" data-value="sector-70,mohali">Sector 70,Mohali</div>
+                                <div class="option" data-value="sector-77,mohali">Sector 77,Mohali</div>
+                                <div class="option" data-value="sector-79,mohali">Sector 79,Mohali</div>
+                                <div class="option" data-value="sector-82,mohali">Sector 82,Mohali</div>
+                                <div class="option" data-value="sector-88,mohali">Sector 88,Mohali</div>
+                                <div class="option" data-value="sector-89,mohali">Sector 89,Mohali</div>
+                                <div class="option" data-value="sector-91,mohali">Sector 91,Mohali</div>
+                                <div class="option" data-value="sector-92,mohali">Sector 92,Mohali</div>
+                                <div class="option" data-value="sector-94,mohali">Sector 94,Mohali</div>
+                                <div class="option" data-value="sector-111,mohali">Sector 111,Mohali</div>
+                                <div class="option" data-value="sector-114,mohali">Sector 114,Mohali</div>
+                                <div class="option" data-value="sector-115,mohali">Sector 115,Mohali</div>
+                                <div class="option" data-value="sector-116,mohali">Sector 116,Mohali</div>
+                                <div class="option" data-value="sector-117,mohali">Sector 117,Mohali</div>
+                                <div class="option" data-value="sector-118,mohali">Sector 118,Mohali</div>
+                                <div class="option" data-value="sector-119,mohali">Sector 119,Mohali</div>
+                                <div class="option" data-value="sector-126,mohali">Sector 126,Mohali</div>
+                                <div class="option" data-value="sector-127,mohali">Sector 127,Mohali</div>
+                            </div>
+                        
+                            <div class="option-group">
+                                <div class="group-label">Chandigarh Locations</div>
+                                <div class="option" data-value="sector-1,chandigarh">Sector 1,Chandigarh</div>
+                                <div class="option" data-value="sector-11a,chandigarh">Sector 11A,Chandigarh</div>
+                                <div class="option" data-value="sector-15a,chandigarh">Sector 15A,Chandigarh</div>
+                                <div class="option" data-value="sector-15d,chandigarh">Sector 15D,Chandigarh</div>
+                                <div class="option" data-value="sector-16a,chandigarh">Sector 16A,Chandigarh</div>
+                                <div class="option" data-value="sector-19c,chandigarh">Sector 19C,Chandigarh</div>
+                                <div class="option" data-value="sector-20a,chandigarh">Sector 20A,Chandigarh</div>
+                                <div class="option" data-value="sector-21d,chandigarh">Sector 21D,Chandigarh</div>
+                                <div class="option" data-value="sector-22c,chandigarh">Sector 22C,Chandigarh</div>
+                                <div class="option" data-value="sector-23d,chandigarh">Sector 23D,Chandigarh</div>
+                                <div class="option" data-value="sector-27d,chandigarh">Sector 27D,Chandigarh</div>
+                                <div class="option" data-value="sector-33b,chandigarh">Sector 33B,Chandigarh</div>
+                                <div class="option" data-value="sector-33c,chandigarh">Sector 33C,Chandigarh</div>
+                                <div class="option" data-value="sector-35a,chandigarh">Sector 35A,Chandigarh</div>
+                                <div class="option" data-value="sector-37c,chandigarh">Sector 37C,Chandigarh</div>
+                                <div class="option" data-value="sector-37d,chandigarh">Sector 37D,Chandigarh</div>
+                                <div class="option" data-value="sector-40d,chandigarh">Sector 40D,Chandigarh</div>
+                                <div class="option" data-value="sector-41a,chandigarh">Sector 41A,Chandigarh</div>
+                                <div class="option" data-value="sector-41b,chandigarh">Sector 41B,Chandigarh</div>
+                                <div class="option" data-value="sector-41d,chandigarh">Sector 41D,Chandigarh</div>
+                                <div class="option" data-value="sector-43,chandigarh">Sector 43,Chandigarh</div>
+                                <div class="option" data-value="sector-44b,chandigarh">Sector 44B,Chandigarh</div>
+                                <div class="option" data-value="sector-44c,chandigarh">Sector 44C,Chandigarh</div>
+                                <div class="option" data-value="sector-44d,chandigarh">Sector 44D,Chandigarh</div>
+                                <div class="option" data-value="sector-45a,chandigarh">Sector 45A,Chandigarh</div>
+                                <div class="option" data-value="sector-50,chandigarh">Sector 50,Chandigarh</div>
+                                <div class="option" data-value="sector-55,chandigarh">Sector 55,Chandigarh</div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" id="location" name="location" value="">
+                    </div>
+                    <div class="selected-tags" id="location-tags"></div>
                 </div>
 
                 <div class="filter-group">
